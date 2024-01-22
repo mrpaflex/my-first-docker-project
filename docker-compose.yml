@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - '4000:3000'
+    depends_on:
+      - db
+  db:
+    image: 'mongo:latest'
+    ports:
+      - '27017:27017'
